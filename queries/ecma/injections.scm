@@ -10,6 +10,11 @@
    (template_string) @content
      (#offset! @content 0 1 0 -1))
 )
+; css`...`, gql`...` etc
+(call_expression
+ function: (identifier) @language
+ arguments: ((template_string) @content
+   (#offset! @content 0 1 0 -1)))
 
 (call_expression
  function: ((identifier) @_name
